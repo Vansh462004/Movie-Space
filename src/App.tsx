@@ -1,5 +1,3 @@
-import { useState } from "react";
-import MovieCard from "./Components/MovieCard";
 import ShowListPage from "./Pages/ShowListPage";
 import { Route, Routes } from "react-router-dom";
 import ShowDetailPage from "./Pages/ShowDetailPage";
