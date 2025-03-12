@@ -28,11 +28,9 @@ const ShowListPage: FC<ShowListPageProps> = ({
             showsQueryChanged(event.target.value);
           }}
         />
-        {loading && query.length ? (
-          <ImSpinner className="animate-spin text-4xl text-blue-500" />
-        ) : (
-          <span className="text-red-500">Enter a valid query!!</span>
-        )}
+        {(loading && query.length > 0) && (
+          <ImSpinner className="animate-spin text-4xl text-blue-500" />)}
+        {(loading && !query.length) && (<span className="text-red-500">Enter a valid query!!</span>)}
       </div>
       <div className="mt-2 flex flex-wrap">
         {shows &&
